@@ -1,0 +1,85 @@
+#%RAML 1.0
+title: Salculator
+version: v 3.0
+
+/Multiplication:
+  get:
+    queryParameters:
+      a:
+        type: integer
+        required: true
+      b:
+        type: integer
+        required: true
+    responses:
+      200:
+        body:
+         application/json:
+          example:
+           {
+            "message": "Multiplication of Two numbers is 25"
+           }    
+      400:
+       body:
+        application/json:
+         example:
+          {
+            "Message": "Runtime Error"
+          }
+      500:
+         body:
+          application/json:
+           example:
+            {
+             "Message":"Server Error"
+            }      
+/addition:
+  get:
+   queryParameters:
+    a:
+     type: integer
+     required: true
+    b:
+     type: integer
+     required: true
+   responses:
+     200:
+       body:
+        application/json:
+         example:
+          {
+           "message": "addition is 55"
+          }    
+     400:
+       body:
+        application/json:
+         example:
+          {
+            "Message": "Runtime Error"
+          }
+     500:
+      body:
+        application/json:
+          example:
+            {
+              "Message": "Server Error"
+            }
+/Subtraction:
+  get:
+     queryParameters:
+      a:
+        type: integer
+        required: true
+      b:
+        type: integer
+        required: true
+     responses:
+       200:
+        body:
+          application/json:
+            example:
+              {
+                "Message": "Subtraction is 20"
+              }
+              
+                      
